@@ -53,3 +53,4 @@
     "*.{js,css,jsx,md,scss}": "prettier --write"
   }
 }
+
