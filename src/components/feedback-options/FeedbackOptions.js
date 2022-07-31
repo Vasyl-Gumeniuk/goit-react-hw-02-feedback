@@ -4,10 +4,10 @@ import styles from './style.module.css';
 const FeedbackOptions = ({ options, onLeaveFeedback }) => {
   return (
     <div>
-      {options.map((option, index) => (
+      {options.map(option => (
         <button
           className={styles.btn}
-          key={index}
+          key={option}
           name={option}
           onClick={onLeaveFeedback}
         >
@@ -19,7 +19,7 @@ const FeedbackOptions = ({ options, onLeaveFeedback }) => {
 };
 
 FeedbackOptions.propTypes = {
-  options: PropTypes.array.isRequired,
+  options: PropTypes.arrayOf(PropTypes.string).isRequired,
   onLeaveFeedback: PropTypes.func.isRequired,
 };
 

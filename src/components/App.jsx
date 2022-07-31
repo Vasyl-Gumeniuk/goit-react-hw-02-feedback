@@ -5,16 +5,10 @@ import Statistics from './statistics/Statistics';
 import Notification from './notification/Notification';
 
 export class App extends Component {
-  static defaultProps = {
+  state = {
     good: 0,
     neutral: 0,
     bad: 0,
-  };
-
-  state = {
-    good: this.props.good,
-    neutral: this.props.neutral,
-    bad: this.props.bad,
   };
 
   countTotalFeedback = () => {
